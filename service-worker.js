@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/StarWarsNostalgia_React/starships/precache-manifest.517ae3e8409bc59c41c6fcf4ca513a48.js"
+  "/StarWarsNostalgia_React/precache-manifest.3a8507fc031b909e9e9470b6b3b518ff.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/StarWarsNostalgia_React/starships/index.html", {
+workbox.routing.registerNavigationRoute("/StarWarsNostalgia_React/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
