@@ -57,13 +57,11 @@ export default class App extends Component {
               <Switch>
                 <Route
                   path="/"
-                  render={() => (
-                    <h2 className="headline">Welcome to Star Wars App!</h2>
-                  )}
                   exact
+                  render={() => <h2>Welcome to Star Wars App!</h2>}
                 />
-                <Route path="/people/:id?" component={PeoplePage} />
-                <Route path="/planets" component={PlanetsPage} />
+                <Route path="/people/:id?" exact component={PeoplePage} />
+                <Route path="/planets" exact component={PlanetsPage} />
                 <Route path="/starships" exact component={StarshipsPage} />
                 <Route
                   path="/starships/:id"
@@ -74,12 +72,14 @@ export default class App extends Component {
                 />
                 <Route
                   path="/login"
+                  exact
                   render={() => (
                     <LoginPage onLogin={this.onLogin} isLoggedIn={isLoggedIn} />
                   )}
                 />
                 <Route
                   path="/secret"
+                  exact
                   render={() => <SecretPage isLoggedIn={isLoggedIn} />}
                 />
                 <Route render={() => <h2>404 - Page Not Found!</h2>} />
